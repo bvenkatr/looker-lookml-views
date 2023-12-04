@@ -1,0 +1,16 @@
+view: user_validate {
+    sql_table_name: 'cloud_tracking-demes.looker_ecom.users'
+
+    dimension: id {
+        type: number
+        sql: ${Table}.id;;
+    }
+    dimension: gender {
+        type: string
+        sql: ${Table}.gender;;
+    }
+    dimension: is_gender_male {
+        type: yesno
+        sql: ${gender} = 'Male';;
+    }
+}
